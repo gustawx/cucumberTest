@@ -8,7 +8,8 @@ import static org.hamcrest.CoreMatchers.equalTo;
 public class PrepareData {
     public static void addShirtToBag(String jsessionId, Map cookies){
         given()
-                .contentType("application/json")
+                .auth().none().sessionId(jsessionId).cookies(cookies)
+                .contentType("application/json").cookie("JSESSIONID=" + jsessionId)
                 .baseUri("http://www.marksandspencer.com")
                 .expect().statusCode(200).body("basketSize", equalTo(1))
         .when()
