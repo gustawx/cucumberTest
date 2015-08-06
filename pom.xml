@@ -20,6 +20,7 @@
         <fluentlenium-cucumber.version>0.10.3</fluentlenium-cucumber.version>
         <fluentlenium-assertj.version>0.10.3</fluentlenium-assertj.version>
         <httpclient.version>4.4.1</httpclient.version>
+        <xml-apis.version>1.4.01</xml-apis.version>
         <!--<awaitility.version>1.6.3</awaitility.version>-->
     </properties>
     <dependencies>
@@ -70,6 +71,11 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>${httpclient.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>${xml-apis.version}</version>
         </dependency>
         <!--<dependency>-->
             <!--<groupId>com.jayway.awaitility</groupId>-->
